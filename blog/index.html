@@ -1,0 +1,42 @@
+---
+title: Blog
+menu: main
+---
+  <div class="container">
+
+    <ul class="media-list">
+      {% for post in paginator.posts %}
+        <li class="media">
+          <div class="media-body">          
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2 class="media-heading">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            {% for category in post.categories %}
+              <span class="label label-default">{{ category }}</span>
+            {% endfor %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+      <nav>
+        <ul class="pager">
+          {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: '/index.html', '' }}">Previous</a></li>
+          {% else %}
+            <li class="disabled"><span>Previous</span></li>
+          {% endif %}
+          {% if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a></li>
+          {% else %}
+            <li class="disabled"><span>Next</span></li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    
+  </div>

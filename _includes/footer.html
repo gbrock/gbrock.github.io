@@ -1,36 +1,36 @@
-<footer class="site-footer jumbotron">
+<footer class="jumbotron">
 
-	<div class="container">
+  <div class="container">
+    <div class="pull-left">
+      <ul class="list-inline">
+        <li>
+          <a href="mailto:{{ site.email }}">
+            <i class="fa fa-2x fa-fw fa-envelope-o">&nbsp;</i>
+            <span>{{ site.email }}</span>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright">Content &copy; <strong>Greg Brock 2009&ndash;2015</strong> <br>unless otherwise noted</p>
+    </div>
+    <ul class="social-list">
+      {% if site.github_username %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}">
+          <i class="fa fa-2x fa-fw fa-github-alt"></i>
+          <span>{{ site.github_username }}</span>
+        </a>
+      </li>
+      {% endif %}
 
-		<div class="row">
-			<div class="col-xs-12">
-				<h2 class="footer-heading">{{ site.title }}</h2>
-			</div>
-			<div class="col-sm-4">
-				<ul class="list-unstyled">
-					<li><a href="mailto:{{ site.email }}"><span class="fa fa-envelope-o fa-fw">&nbsp;</span>{{ site.email }}</a></li>
-					{% if site.github_username %}
-					<li>
-						<a href="https://github.com/{{ site.github_username }}">
-							<span class="fa fa-github fa-fw">&nbsp;</span><span class="username">{{ site.github_username }}</span>
-						</a>
-					</li>
-					{% endif %}
-
-					{% if site.twitter_username %}
-					<li>
-						<a href="https://twitter.com/{{ site.twitter_username }}">
-							<span class="fa fa-twitter fa-fw">&nbsp;</span><span class="username">{{ site.twitter_username }}</span>
-						</a>
-					</li>
-					{% endif %}
-				</ul>
-			</div>
-			<div class="col-sm-8">
-				<p class="text">{{ site.description }}</p>
-			</div>
-		</div>
-	</div>
+      {% if site.twitter_username %}
+      <li>
+        <a href="http://twitter.com/{{ site.twitter_username }}">
+          <i class="fa fa-2x fa-fw fa-twitter"></i>
+          <span>{{ site.twitter_username }}</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
 
 </footer>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>

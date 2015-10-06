@@ -1,0 +1,29 @@
+<div class="container trans">
+  <div class="row">
+    <div class="col-sm-3"><!-- 
+      <a href="/blog">
+        <i class="fa fa-angle-double-left">&nbsp;</i>
+        All Blog Posts
+      </a> -->
+    </div>
+    <div class="col-sm-9">
+      <nav class="blog-pager">
+        <ul class="pager">
+          {% if page.next %}
+            <li><a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}">
+              <i class="fa fa-long-arrow-left">&nbsp;</i>
+              {{ page.next.title }}
+            </a></li>
+          {% endif %}
+          {% if page.previous %}
+            <li><a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}">
+              {{ page.previous.title }}
+              <i class="fa fa-long-arrow-right">&nbsp;</i>
+            </a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <br>
+</div>

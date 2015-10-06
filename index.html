@@ -1,26 +1,58 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="col-xs-12">
-	<div class="home">
 
-		<h1>Posts</h1>
+<div class="container home-header">
 
-		<ul class="media-list">
-			{% for post in site.posts %}
-				<li class="media">
-					<div class="media-body">
-						<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-						<h2 class="media-heading">
-							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-						</h2>
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
+  <h1>Greg Brock</h1>
+  <p class="lead">Making things (websites, mostly) whenever I'm not teaching or learning something new.</p>
+  <!-- <nav class="home-nav">
+    <ul>
+      {% for link in site.navigation %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav> -->
+</div>
 
-		<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="container">
+  <div class="post-content">
+    
+    <p><span class="lead">Heya, I'm Greg,</span> a web programmer in <a href="http://en.wikipedia.org/wiki/Chattanooga,_Tennessee">Chattanooga, TN</a>.</p>
 
-	</div>
+    <p>I believe software should be <strong>cleanly-designed</strong>, <strong>informative</strong>, and <strong>responsive</strong>. I'm a huge believer in building custom solutions, and I strive to do so when the alternative would lead to an unsatisfactory end product.</p>
+
+    <p>I don't consider myself a graphic designer; I probably won't design your logo or other branding. However, I do design clean, minimal pages and widgets tailored to your existing brand. I'm also very comfortable working with professional designers and existing design documents to make sure your website or application is as appealing as possible.</p>
+
+    <p>Need a website promoting your small business? Or, maybe you need a combination blog/shop? Perhaps you'd finally like to make that awesome app idea a reality? <strong>Reach out to me <a href="mailto:{{ site.email }}">in an email</a></strong> and let's talk.</p>
+
+    <hr>
+
+    <div class="media">
+      <div class="media-left">
+        <a href="http://gridprinciples.com" class="media-object">
+          <img width="140" src="/img/gp-logo.png" alt="Grid Principles logo">
+        </a>
+      </div>
+      <div class="media-body">
+        <p>Most of my work is developing projects with <a href="http://seunerinle.com">Seun</a> over at <a href="http://gridprinciples.com">Grid Principles</a>.</p>
+      </div>
+    </div>
+    <div class="media">
+      <div class="media-left">
+        <a href="https://weareairlabs.com" class="media-object">
+          <img width="140" src="/img/air-logo.png" alt="A.I.R. Labs logo">
+        </a>
+      </div>
+      <div class="media-body">
+        <p>I'm also an instructor and course developer at <a href="https://weareairlabs.com">A.I.R. Labs</a>.</p>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>

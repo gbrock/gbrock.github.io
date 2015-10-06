@@ -1,0 +1,28 @@
+{% if page.next %}
+<div class="container trans">
+  <div class="next">
+     <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="pager-title">
+                 <i class="fa fa-long-arrow-left">&nbsp;</i>
+     Newer Post
+      <h3>{{ page.next.title }}</h3>
+    </a>
+  </div>
+</div>
+{% endif %}
+<div class="wide-pager {% if page.previous %} with-previous{% endif %}">
+  <div class="container"> 
+      {% if page.previous %}
+      <div class="prev">
+         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="pager-title">Previous Post <i class="fa fa-long-arrow-right">&nbsp;</i></a>
+         <h3 class="previous-title">{{ page.previous.title }}</h3>
+        <div class="excerpt">{{ page.previous.excerpt }}</div>
+        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <div class="read-more">
+            <i class="fa fa-angle-double-right">&nbsp;</i>
+            Read <strong>{{ page.previous.title }}</strong>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+  </div>
+</div>
